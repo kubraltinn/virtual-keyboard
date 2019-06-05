@@ -1,5 +1,5 @@
 {
-  "name": "my-keyboard",
+  "name": "my-virtual-keyboard",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
     "@angular/common": "^6.0.3",
@@ -48,5 +47,21 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
-  }
+  },
+  "description": "Make Your Own Keyboard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubraltinn/virtual-keyboard"
+  },
+  "keywords": [
+    "my",
+    "virtual",
+    "keyboard"
+  ],
+  "author": "“Kübra <“kubraltinn@gmail.com”>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kubraltinn/my-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/kubraltinn/my-virtual-keyboard#readme"
 }
