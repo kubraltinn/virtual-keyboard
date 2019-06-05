@@ -1,0 +1,203 @@
+.available-letter{
+  font: normal 20pt arial;
+  text-decoration: none;
+  text-align: center;
+  width: 7.9vw !important;
+  height: 7vh;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px #95969A;
+  text-shadow: 0 1px 0 #f5f5f5;
+  cursor: pointer;
+  border: none;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari*/
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.keyboard-button, .return-key {
+  background-color: #acb3bd;
+}
+
+.return-key {
+  width: 18vw;
+}
+
+.numbers li a span {
+  display: block;
+}
+
+.numbers li a b {
+  margin: 3px 0;
+  display: block;
+}
+
+.letter-set {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.letter-set li a span {
+  display: block;
+  margin: 13px 0 0;
+}
+
+.control-set li a span {
+  display: block;
+  margin: 13px 0 0;
+}
+
+.spacebar {
+  width: 68vw;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+ul ol {
+  list-style-type: none;
+}
+
+ul  {
+  margin: 0 auto;
+}
+
+li {
+  float: left;
+}
+
+.main {
+  width: 700px;
+  padding: 20px 50px;
+  margin: 0 auto 50px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #888;
+  text-align: center;
+  font: bold 25pt/25pt arial;
+  margin: 30px 0 60px;}
+
+h2 {
+  color: #666;
+  font: 13pt/0pt arial;}
+
+p {
+  color: #999;
+  font: 9pt/17pt arial;
+  margin: 0 0 50px;}
+
+small {
+  font: italic 8pt/12pt arial;
+  color: #aaa;
+  padding: 0 130px 0 0;
+  display: block;}
+
+cite {
+  display: block;
+  padding: 0 0 30px;
+  margin: 0 auto;
+  text-align: center;
+  color: #999;
+  font: italic bold 8pt arial;}
+
+.backspace-icon {
+  background-color: #999;
+  border: 1px solid #000;
+  width: 3.2em;
+  height: 2.7em;
+}
+
+.available-letter.letter-block {
+  width: 1.4em;
+  background-color: #fff;
+}
+
+.white-backspace {
+  color: #fff;
+  cursor: pointer;
+}
+
+.key {
+  display: block;
+  font: normal 13pt arial;
+  text-decoration: none;
+  text-align: center;
+  width: 13vw;
+  height: 7vh;
+  background: #ffffff;
+  border-radius: 4px;
+  border-top: 1px solid #f5f5f5;
+  box-shadow: 0 1px 1px #95969A;
+  text-shadow: 0 1px 0 #f5f5f5;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari*/
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.letter-set {
+  display: flex;
+  overflow: hidden;
+}
+
+.bottomchars {
+  width: 11.95vw !important;
+}
+
+:host >>> .popover {
+  color: black !important;
+  font-size: 1.5em;
+  background-color: white !important;
+  border: 1px solid #777 !important;
+}
+
+:host >>> .popover .popover-body {
+  font-size: 1em !important;
+  color: black !important;
+}
+
+.bs-popover-top .arrow::after {
+  border-top-color: white !important;
+}
+
+.bs-popover-top .arrow{
+  margin-left: -0.35em !important;
+}
+
+@media (min-width: 320px ) and (max-width: 374px) {
+  .available-letter{
+    width: 7.5vw !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .available-letter{
+    width: 8.6vw !important;
+    font: normal 25pt arial;
+  }
+
+  .key {
+    width: 13.2vw;
+    font: normal 20pt arial;
+  }
+
+  .spacebar {
+    width: 65vw;
+  }
+}
+

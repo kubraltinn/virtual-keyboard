@@ -1,0 +1,59 @@
+<div class="w-100 letters d-flex flex-column align-items-center justify-content-center">
+  <div class="letter-set w-100 text-center"
+       #letterset>
+    <span class="key change-keyboard keyboard-button m-1 d-flex justify-content-center align-items-center"
+          *ngIf="isLettersSetActive() && shouldShowArrowButton()"
+          (click)="convertCase()">
+            <span class="fas fa-arrow-up"></span>
+        </span>
+    <span class="key change-keyboard keyboard-button m-1 d-flex justify-content-center align-items-center"
+          *ngIf="isNumbersSetActive() && shouldShowCharsButton()"
+          (click)="changeKeyboardSet('charactersSet')">
+              <span>#+=</span>
+        </span>
+    <span class="key change-keyboard keyboard-button m-1 d-flex justify-content-center align-items-center"
+          *ngIf="isCharactersSetActive() && shouldShowNumbersButton()"
+          (click)="changeKeyboardSet('numbersSet')">
+              <span>123</span>
+        </span>
+    <ng-template #letterPopover>{{getLastVirtualInput()}}</ng-template>
+
+    <span class="text-lowercase d-inline-block available-letter letter-block m-1"
+          *ngFor="let virtualLetter of getVirtualLetterSet()"
+          [class.bottomchars]="(isNumbersSetActive() || isCharactersSetActive()) && shouldActivateBottomCharsClass()"
+          [class.text-uppercase]="isUpperCaseActive()"
+          [ngbPopover]="letterPopover"
+          triggers="manual"
+          #letter="ngbPopover"
+          (click)="onNewVirtualInput(virtualLetter); showPopover(letter)">
+                {{virtualLetter}}
+        </span>
+    <span class="key keyboard-button backspace-key m-1 d-flex justify-content-center align-items-center"
+          *ngIf="shouldShowLittleBackSpaceButton()"
+          (click)="onBackSpacePressed()">
+            <span class="fas fa-backspace"></span>
+        </span>
+    <div class="backspace-icon m-1 d-inline-block" *ngIf="shouldShowBigBackSpaceButton()">
+      <i (click)="onBackSpacePressed()" class="fas fa-backspace white-backspace fa-2x ml-1 mt-1"></i>
+    </div>
+  </div>
+
+  <div class="control-set d-flex">
+        <span class="key keyboard-button m-1 d-flex justify-content-center align-items-center"
+              *ngIf="isLettersSetActive() && shouldShowNumbersButton()"
+              (click)="changeKeyboardSet('numbersSet')">
+            <span>123</span>
+        </span>
+    <span class="key keyboard-button m-1 d-flex justify-content-center align-items-center"
+          *ngIf="(isNumbersSetActive() || isCharactersSetActive()) && shouldShowLettersButton()"
+          (click)="changeKeyboardSet('lettersSet')">
+              <span>ABC</span>
+        </span>
+    <span class="key spacebar m-1 d-flex justify-content-center align-items-center"
+          *ngIf="shouldShowSpaceBar()"
+          (click)="onSpacePressed()">space</span>
+    <span class="key keyboard-button m-1 d-flex justify-content-center align-items-center"
+          *ngIf="shouldShowReturnButton()"
+          (click)="onReturnPressed()">return</span>
+  </div>
+</div>
