@@ -2,13 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-  Three output is emitted from virtual-keyboard.component.ts;
+  Three output is emitted from virtual-keyboard.component.ts:
   
-  @Output() onBackSpace = new EventEmitter();
-  @Output() onSpace = new EventEmitter();
-  @Output() onReturn = new EventEmitter();
-  @Output() onDelete = new EventEmitter();
-  @Output() onVirtualInput = new EventEmitter<string>();
+  @Output() onBackSpace = new EventEmitter(); <br />
+  @Output() onSpace = new EventEmitter(); <br />
+  @Output() onReturn = new EventEmitter(); <br />
+  @Output() onDelete = new EventEmitter(); <br />
+  @Output() onVirtualInput = new EventEmitter<string>(); <br />
 
   Selector name for this component is "app-virtual-keyboard"
 
