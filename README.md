@@ -2,6 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
+  Three output is emitted from virtual-keyboard.component.ts;
+  
+  @Output() onBackSpace = new EventEmitter();
+  @Output() onSpace = new EventEmitter();
+  @Output() onReturn = new EventEmitter();
+  @Output() onDelete = new EventEmitter();
+  @Output() onVirtualInput = new EventEmitter<string>();
+
+  Selector name for this component is "app-virtual-keyboard"
+
+  example usage:
+  
+    <app-virtual-keyboard
+    (onBackSpace)="onBackSpacePressed()"
+    (onSpace)="onSpacePressed()"
+    (onReturn)="onReturnPressed()"
+    (onDelete)="onDeletePressed()"
+    (onVirtualInput)="onVirtualInputEntered($event)"
+  >
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
