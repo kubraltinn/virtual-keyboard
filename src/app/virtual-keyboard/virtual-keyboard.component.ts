@@ -20,6 +20,7 @@ export class VirtualKeyboardComponent {
   @Output() onSpace = new EventEmitter();
   @Output() onReturn = new EventEmitter();
   @Output() onDelete = new EventEmitter();
+  @Output() onVirtualInput = new EventEmitter<string>();
 
   constructor(private zone: NgZone) {
     this.initialize();
@@ -76,7 +77,7 @@ export class VirtualKeyboardComponent {
     return this.lastVirtualInput;
   }
 
-  onVirtualInput(letter: string): void {
+  onVirtualInputEntered(letter: string): void {
     this.zone.runOutsideAngular(() => {
       this.zone.run(() => {
         letter = this.isUpperCaseActive() ? letter.toUpperCase() : letter.toLowerCase();
@@ -87,7 +88,7 @@ export class VirtualKeyboardComponent {
   }
 
   private onInput(letter: string): void {
-
+      this.onVirtualInput.emit(letter);
   }
 
   isLettersSetActive(): boolean {
